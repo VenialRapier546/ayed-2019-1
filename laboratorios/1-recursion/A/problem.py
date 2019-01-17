@@ -3,6 +3,17 @@ import json
 
 # TODO Complete!!
 def reverse(text):
+    if len(text) == 1:
+        return text
+    else:
+        t = []
+        for i in range(len(text)):
+            t.append(text[i])        
+        text1 = []
+        text1.append(t[len(text)-1])
+        t.remove(t[len(text)-1])
+        text1.append(reverse(t))
+        print(text1)
     return text
 
 
